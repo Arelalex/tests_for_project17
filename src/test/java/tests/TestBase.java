@@ -17,20 +17,20 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://selecty.ru/";
-        Configuration.browser = System.getProperty("browser", "firefox");
-        Configuration.browserVersion = System.getProperty("version", "98.0");
+      //  Configuration.browser = System.getProperty("browser", "chrome");
+      //  Configuration.browserVersion = System.getProperty("version", "100.0");
         Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
-        Configuration.remote = System.getProperty("remoteWebDriver", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+      //  Configuration.remote = System.getProperty("remoteWebDriver", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.pageLoadStrategy = "eager";
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
+      /*  SelenideLogger.addListener("allure", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
-        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;*/
     }
 
     @AfterEach

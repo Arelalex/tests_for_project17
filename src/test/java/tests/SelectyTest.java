@@ -92,6 +92,9 @@ public class SelectyTest extends TestBase {
             mainPage.openPage();
             mainPage.loadPage();
         });
+        step("Принять cookie", () -> {
+            mainPage.acceptCookies();
+        });
         step("Проверить отображение статистики закрытых вакансий", () -> {
             mainPage.checkStatisticsVacancy();
         });
@@ -158,7 +161,6 @@ public class SelectyTest extends TestBase {
             contactsPage.clickContacts();
         });
         step("Принять cookie", () -> {
-            contactsPage.clickContacts();
             contactsPage.acceptCookies();
         });
         step("Заполнить форму", () -> {

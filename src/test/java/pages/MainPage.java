@@ -27,7 +27,8 @@ public class MainPage {
             clientFinance = $x("//button[text()='Финансовый сектор']"),
             clientRetail = $x("//button[text()='Ритейл, FMCG']"),
             clientIndustry = $x("//button[text()='Промышленность']"),
-            clientTelecom = $x("//button[text()='Телеком, E-com']");
+            clientTelecom = $x("//button[text()='Телеком, E-com']"),
+            buttonCookies = $x("//*[@class='t657__btn t-btn t-btn_sm']");
 
     public MainPage openPage() {
         open("");
@@ -161,6 +162,12 @@ public class MainPage {
 
     public MainPage checkTelecom() {
         clientTelecom.shouldBe(visible);
+
+        return this;
+    }
+
+    public MainPage acceptCookies() {
+        buttonCookies.click();
 
         return this;
     }
