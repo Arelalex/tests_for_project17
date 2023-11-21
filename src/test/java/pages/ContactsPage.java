@@ -2,11 +2,15 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.disappear;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ContactsPage {
 
     private SelenideElement
+            selectyLoader = $x("//img[@alt='Selecty animation']"),
             tabContacts = $x("//a[contains(text(),'Контакты')]"),
             addressOffice = $x("//span[contains(text(),'Адрес офиса')]"),
             inputName = $x("//input[@placeholder='Имя']"),
@@ -55,6 +59,12 @@ public class ContactsPage {
 
     public ContactsPage acceptCookies() {
         buttonCookies.click();
+
+        return this;
+    }
+
+    public ContactsPage loadPage() {
+        selectyLoader.should(disappear, Duration.ofSeconds(100));
 
         return this;
     }

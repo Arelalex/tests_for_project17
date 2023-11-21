@@ -159,6 +159,7 @@ public class SelectyTest extends TestBase {
         });
         step("Открыть страницу Контакты", () -> {
             contactsPage.clickContacts();
+            contactsPage.loadPage();
         });
         step("Принять cookie", () -> {
             contactsPage.acceptCookies();
