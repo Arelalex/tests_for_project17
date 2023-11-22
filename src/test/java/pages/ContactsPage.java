@@ -12,7 +12,7 @@ public class ContactsPage {
     private SelenideElement
             selectyLoader = $x("//img[@alt='Selecty animation']"),
             tabContacts = $x("//a[contains(text(),'Контакты')]"),
-            addressOffice = $x("//span[contains(text(),'Адрес офиса')]"),
+            addressOfficeHow = $x("//h2[contains(text(),'Как добраться?')]"),
             inputName = $x("//input[@placeholder='Имя']"),
             inputCompany = $x("//input[@placeholder='Компания']"),
             inputContact = $x("//input[@placeholder='Ваш контакт (телефон, E-mail или Telegram)']"),
@@ -27,7 +27,7 @@ public class ContactsPage {
     }
 
     public ContactsPage setName(String value) {
-        addressOffice.scrollIntoView(false);
+        addressOfficeHow.scrollIntoView(false);
         inputName.setValue(value);
 
         return this;
