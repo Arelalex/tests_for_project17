@@ -101,14 +101,8 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsVacancy() {
-        String finalText = null;
-        int count = 0;
         spanOurClients.scrollIntoView(false);
-        while (!statisticSelectorVacancies.getText().equals(finalText) && count < 50) {
-            finalText = statisticSelectorVacancies.getText();
-            count++;
-        }
-      //  loadStatistics.shouldHave(exactText("1500+"));
+        loadStatistics.shouldHave(exactText("1500+"));
         helpMatcherForValue2(statisticSelectorVacancies.getText());
 
         return this;
@@ -127,12 +121,6 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsCandidates() {
-        String finalText = null;
-        int count = 0;
-        while (!statisticsСandidates.getText().equals(finalText) && count < 50) {
-            finalText = statisticsСandidates.getText();
-            count++;
-        }
         helpMatcherForValue3(statisticsСandidates.getText());
 
         return this;
