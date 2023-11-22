@@ -15,7 +15,6 @@ public class MainPage {
 
     private SelenideElement
             selectyLoader = $x("//img[@alt='Selecty animation']"),
-            statisticsTitle = $x("//span[text()='в цифрах']"),
             statisticSelectorVacancies = $x("//div[text()='Закрытых вакансий']/../div[contains(@class, 'heading')]"),
             statisticSelectorClients = $x("//div[text()='Клиентов из рейтинга Топ-500 РБК']/../div[contains(@class, 'heading')]"),
             statisticsRecruiters = $x("//div[text()='ИТ рекрутеров']/../div[contains(@class, 'heading')]"),
