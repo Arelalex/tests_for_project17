@@ -30,6 +30,7 @@ public class MainPage {
             clientTelecom = $x("//button[text()='Телеком, E-com']"),
             buttonCookies = $x("//*[@class='t657__btn t-btn t-btn_sm']");
 
+
     public MainPage openPage() {
         open("");
 
@@ -37,7 +38,8 @@ public class MainPage {
     }
 
     public MainPage loadPage() {
-        selectyLoader.should(disappear, Duration.ofSeconds(100));
+        selectyLoader.shouldBe(visible);
+        selectyLoader.should(disappear, Duration.ofSeconds(15));
 
         return this;
     }
@@ -45,7 +47,6 @@ public class MainPage {
     public MainPage changeLanguage(String value) {
         String LanguageSelector = "//a[text()='%s']";
         $x(String.format(LanguageSelector, value)).click();
-        selectyLoader.should(disappear, Duration.ofSeconds(100));
 
         return this;
     }

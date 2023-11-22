@@ -53,6 +53,7 @@ public class SelectyTest extends TestBase {
         });
         step("Переключить язык", () -> {
             mainPage.changeLanguage(searchQuery);
+            mainPage.loadPage();
         });
         step("Проверить названия табов в соответствии с выбранным языком", () -> {
             mainPage.checkingTabs(expectedTabs);
