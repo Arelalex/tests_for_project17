@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.codeborne.selenide.Condition.disappear;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
@@ -28,7 +27,8 @@ public class MainPage {
             clientRetail = $x("//button[text()='Ритейл, FMCG']"),
             clientIndustry = $x("//button[text()='Промышленность']"),
             clientTelecom = $x("//button[text()='Телеком, E-com']"),
-            buttonCookies = $x("//*[@class='t657__btn t-btn t-btn_sm']");
+            buttonCookies = $x("//*[@class='t657__btn t-btn t-btn_sm']"),
+            loadStatistics = $x("//div[text()='1500+']");
 
 
     public MainPage openPage() {
@@ -101,7 +101,14 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsVacancy() {
+        String finalText = null;
+        int count = 0;
         statisticSelectorVacancies.scrollIntoView(false);
+        while (!statisticSelectorVacancies.getText().equals(finalText) && count < 50) {
+            finalText = statisticSelectorVacancies.getText();
+            count++;
+        }
+      //  loadStatistics.shouldHave(exactText("1500+"));
         helpMatcherForValue2(statisticSelectorVacancies.getText());
 
         return this;
@@ -122,7 +129,13 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsCandidates() {
+        String finalText = null;
+        int count = 0;
         statisticsСandidates.scrollIntoView(false);
+        while (!statisticsСandidates.getText().equals(finalText) && count < 50) {
+            finalText = statisticsСandidates.getText();
+            count++;
+        }
         helpMatcherForValue3(statisticsСandidates.getText());
 
         return this;

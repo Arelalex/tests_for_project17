@@ -88,7 +88,7 @@ public class SelectyTest extends TestBase {
     @DisplayName("Checking statistics indicators")
     @Tag("Regress")
     @MethodSource
-    void checkingStatisticsVacanciesTest() {
+    void checkingStatisticsTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage();
             mainPage.loadPage();
