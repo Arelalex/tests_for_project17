@@ -15,6 +15,7 @@ public class MainPage {
 
     private SelenideElement
             selectyLoader = $x("//img[@alt='Selecty animation']"),
+            spanOurClients = $x("//span[text()='клиенты']"),
             statisticSelectorVacancies = $x("//div[text()='Закрытых вакансий']/../div[contains(@class, 'heading')]"),
             statisticSelectorClients = $x("//div[text()='Клиентов из рейтинга Топ-500 РБК']/../div[contains(@class, 'heading')]"),
             statisticsRecruiters = $x("//div[text()='ИТ рекрутеров']/../div[contains(@class, 'heading')]"),
@@ -102,7 +103,7 @@ public class MainPage {
     public MainPage checkStatisticsVacancy() {
         String finalText = null;
         int count = 0;
-        statisticSelectorVacancies.scrollIntoView(false);
+        spanOurClients.scrollIntoView(false);
         while (!statisticSelectorVacancies.getText().equals(finalText) && count < 50) {
             finalText = statisticSelectorVacancies.getText();
             count++;
@@ -114,14 +115,12 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsClients() {
-        statisticSelectorClients.scrollIntoView(false);
         helpMatcherForValue2(statisticSelectorClients.getText());
 
         return this;
     }
 
     public MainPage checkStatisticsRecruiters() {
-        statisticsRecruiters.scrollIntoView(false);
         helpMatcherForValue2(statisticsRecruiters.getText());
 
         return this;
@@ -130,7 +129,6 @@ public class MainPage {
     public MainPage checkStatisticsCandidates() {
         String finalText = null;
         int count = 0;
-        statisticsСandidates.scrollIntoView(false);
         while (!statisticsСandidates.getText().equals(finalText) && count < 50) {
             finalText = statisticsСandidates.getText();
             count++;
@@ -141,14 +139,12 @@ public class MainPage {
     }
 
     public MainPage checkStatisticsEmployedCandidates() {
-        statisticsEmployedCandidates.scrollIntoView(false);
         helpMatcherForValue1(statisticsEmployedCandidates.getText());
 
         return this;
     }
 
     public MainPage checkStatisticsSpecialists() {
-        statisticsSpecialists.scrollIntoView(false);
         helpMatcherForValue4(statisticsSpecialists.getText());
 
         return this;
