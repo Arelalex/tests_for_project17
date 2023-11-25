@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("demoqa_m")
+@Tag("demo")
 public class SelectyTest extends TestBase {
     TestData testData = new TestData();
     MainPage mainPage = new MainPage();

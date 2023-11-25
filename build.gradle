@@ -49,8 +49,32 @@ test {
     systemProperties(System.getProperties())
 }
 
-task demoqa_test_m(type: Test) {
+tasks.register('Regress', Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
     useJUnitPlatform {
-        includeTags("demoqa_m")
+        includeTags("Regress")
+    }
+}
+
+tasks.register('Smoke', Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+    useJUnitPlatform {
+        includeTags("Smoke")
+    }
+}
+
+task demo_test(type: Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+    useJUnitPlatform {
+        includeTags("demo")
     }
 }
