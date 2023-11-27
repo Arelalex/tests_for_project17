@@ -4,17 +4,16 @@
 
 ## :feather: Содержание:
 
-- [Используемый стек](#используемый-стек)
-- [Реализованные проверки](#реализованные-проверки)
-- [Запуск автотестов](#запуск-автотестов)
-- [Сборка в Jenkins](#сборка-в-jenkins)
-- [Пример Allure-отчета](#пример-Allure-отчета)
-- [Интеграция с Allure TestOps](#интеграция-с-Allure-TestOps)
-- [Интеграция с Jira](#интеграция-с-Jira)
-- [Уведомления в Telegram](#уведомления-в-Telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Selenoid](#видео-примера-запуска-тестов-в-Selenoid)
+- [Используемый стек](#books-используемый-стек)
+- [Реализованные проверки](#heavy_check_mark-реализованные-проверки)
+- [Запуск автотестов](#arrow_forward-запуск-автотестов)
+- [Пример Allure-отчета](#пример-allure-отчета)
+- [Интеграция с Allure TestOps](#интеграция-с-allure-testops)
+- [Интеграция с Jira](#интеграция-с-jira)
+- [Уведомления в Telegram](#уведомления-в-telegram-с-использованием-бота)
+- [Видео примера запуска тестов в Selenoid](#видео-примера-запуска-тестов-в-selenoid)
 
-## :books: Используемый стек:
+## :books: Используемый стек
 <p align="center">
 <a href="https://www.jetbrains.com/ru-ru/idea/"><img src="media/logo/intellij.svg" width="50" alt="IntelliJ IDEA"></a>
 <a href="https://www.java.com/"><img src="media/logo/java.svg" width="50" alt="Java"></a>
@@ -39,21 +38,21 @@
 - Результаты приходят в `Telegram`
 - Так же есть интеграция с `Allure TestOps` и `Jira`
 
-## :heavy_check_mark: Реализованные проверки:
+## :heavy_check_mark: Реализованные проверки
 - Параметризованный тест смены языка на русский, английский
 - На главной странице отображаются иконки социальных сетей
 - Отображение статистических показателей
 - Отображение табов с группированием клиентов
 - Заполнение формы для связи с контактами
 
-## :arrow_forward: Запуск автотестов:
+## :arrow_forward: Запуск автотестов
 ### Запуск тестов из терминала:
 ```bash
 gradle clean demo
 ```
 При выполнении данной команды в терминале IDE тесты запустятся удаленно в `Selenoid`
 
-### Запуск текстов удаленно через Jenkins:
+### Запуск тестов удаленно через Jenkins:
 
 ```bash
 clean
@@ -64,7 +63,7 @@ ${TASK}
 -DremoteWebDriver=${REMOTE_DRIVER_URL}
 ```
 
-### <img src="media/logo/jenkins.svg" title="Jenkins" width="2%"/> Запуск тестов в [Jenkins:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
+### <img src="media/logo/jenkins.svg" title="Jenkins" width="2%"/> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
 
 Для запуска сборки необходимо перейти в раздел `Build with Parameters` и нажать кнопку `Build`
 <p align="center">
@@ -81,14 +80,14 @@ ${TASK}
 
 После выполнения сборки и прогона тестов, в блоке `Build History` напротив номера сборки появятся значки `Allure Report` и `Allure TestOps`, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
-## <img src="media/logo/allure.svg" title="Allure Report" width="2%"/> Пример [Allure-отчета:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/12/allure/)
+## <img src="media/logo/allure.svg" title="Allure Report" width="2%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/12/allure/)
 
 <p align="center">
 <img title="Allure Overview" src="media/screens/Allure Report.png">
 </p>
 
 
-## <img src="media/logo/allure testops.svg" title="Allure TestOps" width="2%"/> Интеграция с [Allure TestOps:](https://allure.autotests.cloud/project/3837/dashboards)
+## <img src="media/logo/allure testops.svg" title="Allure TestOps" width="2%"/> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3837/dashboards)
 
 На Dashboard в `Allure TestOps` отображается статистика с количеством ручных и автоматизированных тестов. Новые тесты, а так же результаты прогона появляются при каждом запуске сборки
 
@@ -103,7 +102,7 @@ ${TASK}
 </p>
 
 
-## <img src="media/logo/jira.svg" title="Jira" width="2%"/> Интеграция с [Jira:](https://jira.autotests.cloud/browse/HOMEWORK-981)
+## <img src="media/logo/jira.svg" title="Jira" width="2%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-981)
 
 Реализована интеграция `Allure TestOps` с `Jira`, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -121,7 +120,7 @@ ${TASK}
 </p>
 
 
-## <img src="media/logo/selenoid.svg" title="Selenoid" width="2%"> Видео примера запуска тестов в Selenoid:
+## <img src="media/logo/selenoid.svg" title="Selenoid" width="2%"> Видео примера запуска тестов в Selenoid
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
