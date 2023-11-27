@@ -53,6 +53,17 @@ gradle clean demo
 ```
 При выполнении данной команды в терминале IDE тесты запустятся удаленно в `Selenoid`
 
+### Запуск текстов удаленно через Jenkins:
+
+```bash
+clean
+${TASK}
+-Dbrowser=${BROWSER}
+-Dversion=${BROWSER_VERSION}
+-DwindowSize=${BROWSER_SIZE}
+-DremoteWebDriver=${REMOTE_DRIVER_URL}
+```
+
 ### <img src="media/logo/jenkins.svg" title="Jenkins" width="4%"/> Запуск тестов в [Jenkins:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
 
 Для запуска сборки необходимо перейти в раздел `Build with Parameters` и нажать кнопку `Build`
@@ -70,14 +81,14 @@ gradle clean demo
 
 После выполнения сборки и прогона тестов, в блоке `Build History` напротив номера сборки появятся значки `Allure Report` и `Allure TestOps`, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
-## <img src="media/logo/allure.svg" title="Allure Report" width="4%"/> Пример [Allure-отчета:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/12/allure/)
+## <img src="media/logo/allure.svg" title="Allure Report" width="2%"/> Пример [Allure-отчета:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/12/allure/)
 
 <p align="center">
 <img title="Allure Overview" src="media/screens/Allure Report.png">
 </p>
 
 
-## <img src="media/logo/allure testops.svg" title="Allure TestOps" width="4%"/> Интеграция с [Allure TestOps:](https://allure.autotests.cloud/project/3837/dashboards)
+## <img src="media/logo/allure testops.svg" title="Allure TestOps" width="2%"/> Интеграция с [Allure TestOps:](https://allure.autotests.cloud/project/3837/dashboards)
 
 На Dashboard в `Allure TestOps` отображается статистика с количеством ручных и автоматизированных тестов. Новые тесты, а так же результаты прогона появляются при каждом запуске сборки
 
@@ -92,7 +103,7 @@ gradle clean demo
 </p>
 
 
-## <img src="media/logo/jira.svg" title="Jira" width="4%"/> Интеграция с [Jira:](https://jira.autotests.cloud/browse/HOMEWORK-981)
+## <img src="media/logo/jira.svg" title="Jira" width="2%"/> Интеграция с [Jira:](https://jira.autotests.cloud/browse/HOMEWORK-981)
 
 Реализована интеграция `Allure TestOps` с `Jira`, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -101,16 +112,16 @@ gradle clean demo
 </p>
 
 
-## <img src="media/logo/telegram.svg" title="Telegram" width="4%"> Уведомления в Telegram с использованием бота
+## <img src="media/logo/telegram.svg" title="Telegram" width="2%"> Уведомления в Telegram с использованием бота
 
 После завершения прогона автотестов автоматически отправляется отчет с результами прогона тестов в `Telegram`
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="media/screens/Report in Telegram.png">
+<img width="70%" title="Telegram Notifications" src="media/screens/telegramreport.png">
 </p>
 
 
-## <img src="media/logo/Selenoid.svg" title="Selenoid" width="4%"> Видео примера запуска тестов в Selenoid:
+## <img src="media/logo/selenoid.svg" title="Selenoid" width="2%"> Видео примера запуска тестов в Selenoid:
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
