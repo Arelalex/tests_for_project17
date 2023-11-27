@@ -64,7 +64,7 @@ ${TASK}
 -DremoteWebDriver=${REMOTE_DRIVER_URL}
 ```
 
-### <img src="media/logo/jenkins.svg" title="Jenkins" width="4%"/> Запуск тестов в [Jenkins:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
+### <img src="media/logo/jenkins.svg" title="Jenkins" width="2%"/> Запуск тестов в [Jenkins:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
 
 Для запуска сборки необходимо перейти в раздел `Build with Parameters` и нажать кнопку `Build`
 <p align="center">
@@ -97,7 +97,7 @@ ${TASK}
 </p>
 
 
-### Результат выполнения автотеста:
+### Результат выполнения автотестов:
 <p align="center">
 <img title="Test Results in Alure TestOps" src="media/screens/Allur Results.png">
 </p>
@@ -117,7 +117,7 @@ ${TASK}
 После завершения прогона автотестов автоматически отправляется отчет с результами прогона тестов в `Telegram`
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="media/screens/telegramreport.png">
+<img title="Telegram Notifications" src="media/screens/Report in telegram.png" width="70%">
 </p>
 
 
