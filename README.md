@@ -14,9 +14,9 @@
 - [Уведомления в Telegram](#уведомления-в-Telegram-с-использованием-бота)
 - [Видео примера запуска тестов в Selenoid](#видео-примера-запуска-тестов-в-Selenoid)
 
-## Используемый стек:
+## :books: Используемый стек:
 <p align="center">
-<a href="https://www.jetbrains.com/ru-ru/idea/"><img src="media/logo/Intellij_IDEA_icon.svg" width="50" alt="IntelliJ IDEA"></a>
+<a href="https://www.jetbrains.com/ru-ru/idea/"><img src="media/logo/intellij.svg" width="50" alt="IntelliJ IDEA"></a>
 <a href="https://www.java.com/"><img src="media/logo/java.svg" width="50" alt="Java"></a>
 <a href="https://junit.org/junit5/docs/current/user-guide/"><img src="media/logo/junit5.svg" width="50" alt="JUnit 5"></a>
 <a href="https://selenide.org/"><img src="media/logo/selenide.svg" width="50" alt="Selenide"></a>
@@ -26,7 +26,7 @@
 <a href="https://www.jenkins.io/"><img src="media/logo/jenkins.svg" width="50" alt="Jenkins"></a>
 <a href="https://web.telegram.org/"><img src="media/logo/telegram.svg" width="50" alt="Telegram"></a>
 <a href="https://github.com/"><img src="media/logo/github.svg" width="50" alt="GitHub"></a>
-<a href="https://qameta.io/"><img src="media/logo/testops.svg" width="50" alt="Allure TestOps"></a>
+<a href="https://qameta.io/"><img src="media/logo/allure testops.svg" width="50" alt="Allure TestOps"></a>
 <a href="https://www.atlassian.com/ru/software/jira"><img src="media/logo/jira.svg" width="50" alt="Jira"></a>
 </p>
 
@@ -39,21 +39,21 @@
 - Результаты приходят в `Telegram`
 - Так же есть интеграция с `Allure TestOps` и `Jira`
 
-## Реализованные проверки:
+## :heavy_check_mark: Реализованные проверки:
 - Параметризованный тест смены языка на русский, английский
 - На главной странице отображаются иконки социальных сетей
 - Отображение статистических показателей
 - Отображение табов с группированием клиентов
 - Заполнение формы для связи с контактами
 
-## Запуск автотестов:
+## :arrow_forward: Запуск автотестов:
 ### Запуск тестов из терминала:
-```
+```bash
 gradle clean demo
 ```
 При выполнении данной команды в терминале IDE тесты запустятся удаленно в `Selenoid`
 
-### Запуск тестов в Jenkins:
+### <img src="media/logo/jenkins.svg" title="Jenkins" width="4%"/> Запуск тестов в [Jenkins:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/)
 
 Для запуска сборки необходимо перейти в раздел `Build with Parameters` и нажать кнопку `Build`
 <p align="center">
@@ -70,14 +70,14 @@ gradle clean demo
 
 После выполнения сборки и прогона тестов, в блоке `Build History` напротив номера сборки появятся значки `Allure Report` и `Allure TestOps`, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
-## Пример Allure-отчета:
+## <img src="media/logo/allure.svg" title="Allure Report" width="4%"/> Пример [Allure-отчета:](https://jenkins.autotests.cloud/job/22-a_moskotina-jenkins_17_project/12/allure/)
 
 <p align="center">
 <img title="Allure Overview" src="media/screens/Allure Report.png">
 </p>
 
 
-## Интеграция с Allure TestOps:
+## <img src="media/logo/allure testops.svg" title="Allure TestOps" width="4%"/> Интеграция с [Allure TestOps:](https://allure.autotests.cloud/project/3837/dashboards)
 
 На Dashboard в `Allure TestOps` отображается статистика с количеством ручных и автоматизированных тестов. Новые тесты, а так же результаты прогона появляются при каждом запуске сборки
 
@@ -92,7 +92,7 @@ gradle clean demo
 </p>
 
 
-## Интеграция с Jira:
+## <img src="media/logo/jira.svg" title="Jira" width="4%"/> Интеграция с [Jira:](https://jira.autotests.cloud/browse/HOMEWORK-981)
 
 Реализована интеграция `Allure TestOps` с `Jira`, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -101,7 +101,7 @@ gradle clean demo
 </p>
 
 
-## Уведомления в Telegram с использованием бота
+## <img src="media/logo/telegram.svg" title="Telegram" width="4%"> Уведомления в Telegram с использованием бота
 
 После завершения прогона автотестов автоматически отправляется отчет с результами прогона тестов в `Telegram`
 
@@ -110,7 +110,7 @@ gradle clean demo
 </p>
 
 
-## Видео примера запуска тестов в Selenoid:
+## <img src="media/logo/Selenoid.svg" title="Selenoid" width="4%"> Видео примера запуска тестов в Selenoid:
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 <p align="center">
